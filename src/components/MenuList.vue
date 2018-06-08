@@ -50,6 +50,7 @@
     }
     &:not(.menu-title):hover a {
       color: #000;
+      text-decoration: underline;
     }
   }
 
@@ -60,7 +61,10 @@
       transition: all .3s ease;
       &:not(.menu-title):hover {
         background: var(--blue-light);
-        a {color: var(--blue-lightest);}
+        a {
+          color: var(--blue-lightest);
+          text-decoration: none;
+        }
       }
     }
   }

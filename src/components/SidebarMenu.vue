@@ -23,20 +23,6 @@ export default {
       type: Object,
       required: true
     }
-  },
-
-  methods: {
-    handleMouseEnter (e) {
-      console.log('entered', e.target, e.target.parentNode)
-      if (e.target.parentNode.classList.contains('menu-list-wrapper')) {
-        e.target.classList.add('active')
-      }
-    },
-    handleMouseLeave (e) {
-      if (e.target.parentNode.classList.contains('menu-list-wrapper')) {
-        e.target.parentNode.classList.remove('active')
-      }
-    }
   }
 }
 </script>
@@ -68,14 +54,17 @@ export default {
         cursor: pointer;
       }
       &:hover {
+        .icon {
+          background: var(--gry-drk);
+          svg path {fill: var(--blue);}
+        }
         .item-wrapper {
           position: absolute;
           display: inline-block;
           left: 63px;
           width: auto;
           .icon {
-            display: inline-block;
-            background: var(--gry-drk);
+            display: inline-block; 
           }
           .menu-list {
             display: block;
